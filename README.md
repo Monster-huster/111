@@ -77,7 +77,7 @@ void map(){
    printf("你的分数：%d",score);
    gotoxy(X+3,Y/2+2);
    printf("特殊说明：当贪吃蛇吃掉♂\
-时，会变得非常亢♂奋！");
+时，会变得更加亢♂奋！");
 }
 
 void printfood(){
@@ -249,12 +249,22 @@ void whetherNAN(){
     printf("♂");
     score+=200;
     speed+=12.5;
+    }
 }
 void ifhitwallOReatself(){
+   int Life=0;
     if(head->x==1 or head->x==X or head->y==1 or 
    head->y==Y)
-   break;
-   else if()
+   life=1;
+   struct snake *q=
+   (struct snake *)malloc(sizeof(struct snake));
+   q=head->form;
+   for(;q->form!=NULL;q=q->form)
+   {
+       if(q->x==head->x and q->y==head->y)
+       Life=1
+   }
+   if(Life==1)
    break;
 }
 void over(){
